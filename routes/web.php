@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiscController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,18 +21,7 @@ Route::get('/', function () {
 })->name('home');
 
 //dischi
-Route::get('/discs', function () {
-
-    $discs = config('discs');
-
-    return view('discs', compact('discs'));
-})->name('discs');
+Route::get('/discs', 'DiscController@index')->name('discs.index');
 
 //disco
-Route::get('/discs/{id}', function ($id) {
-    $discs = config('discs');
-    $disc = $discs[$id];
-
-
-    return view('disc', compact('disc'));
-})->name('disc');
+Route::get('/discs/{id}', 'DiscController@show')->name('discs.show');

@@ -5,7 +5,7 @@
     <nav>
         <ul>
             <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="{{ route('discs') }}">Dischi</a></li>
+            <li><a href="{{ route('discs.index') }}">Dischi</a></li>
         </ul>
     </nav>
 </header>
