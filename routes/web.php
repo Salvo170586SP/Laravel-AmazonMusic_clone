@@ -19,10 +19,19 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-//prodotti
+//dischi
 Route::get('/discs', function () {
 
-   $discs = config('discs');
+    $discs = config('discs');
 
     return view('discs', compact('discs'));
 })->name('discs');
+
+//disco
+Route::get('/discs/{id}', function ($id) {
+    $discs = config('discs');
+    $disc = $discs[$id];
+
+
+    return view('disc', compact('disc'));
+})->name('disc');
