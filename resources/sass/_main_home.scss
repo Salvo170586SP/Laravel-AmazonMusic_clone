@@ -2,28 +2,26 @@
 
 #offer{
     
-    height: 340px;
+    height: 450px;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('https://m.media-amazon.com/images/G/01/AmazonMusic/2022/Marketing/SWSpring_DMUX-5871/LandingPage/DV4/Global_012522_SpringSitewide_ACQ_LP_Slot1_3000x1100.jpg');
     
+    figure{
+        width: 300px;
+    }
+
     .banner{
-
-        img{
-            height: 90px;
-        }
-
         .banner-message{
-            text-align: center;
             p{
                 background-color: rgba(0, 0, 0, 0.799);
                 color: yellow;
                 font-size: 40px;
-                width: 500px;
+                width: 100%;
                 text-align: center;
-                padding: 2px;
+                padding: 5px;
                 font-weight: bold;
                 margin-bottom: 10px;
             }
