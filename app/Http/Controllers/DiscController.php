@@ -14,7 +14,7 @@ class DiscController extends Controller
      */
     public function index()
     {
-        $discs = Disc::all();
+        $discs = Disc::orderBy('title')->get();
 
         return view('discs.index', compact('discs'));
     }
@@ -37,7 +37,16 @@ class DiscController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|string|min:2',
+            'author' => 'required|string|min:2',
+            'year' => 'required|string',
+            'poster' => 'nullable',
+            'description' => 'nullable|string|min:10',
+        ]);
+
         $data = $request->all();
+
 
         $new_disc = new Disc();
         $new_disc->fill($data);
@@ -67,9 +76,10 @@ class DiscController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Disc $disc)
     {
-        //
+        
+        return view('discs.edit', compact('disc'));
     }
 
     /**
@@ -79,9 +89,16 @@ class DiscController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Disc $disc)
     {
-        //
+        $data = $request->all();
+
+        /* $disc->fill($data);
+        $disc->save(); */
+
+        $disc->update($data);
+        
+        return redirect()->route('discs.show', $disc->id);
     }
 
     /**

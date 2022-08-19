@@ -10902,6 +10902,10 @@ header nav ul li a:hover, header nav ul li a:active {
   color: white;
 }
 
+figure img {
+  border-radius: 50%;
+}
+
 #offer {
   height: 450px;
   display: flex;
