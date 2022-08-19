@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row gy-3">
             @forelse ($discs as $index => $disc)
-                <div class="col col-md-3 d-flex align-items-stretch justify-content-center">
+                <div class="col col-md-3 d-flex align-items-stretch justify-content-center py-4">
                     <div class="card bg-dark text-center p-2" style="width: 300px">
                         <a href="{{ route("discs.show", ['id' => $index]) }}">
                             <figure>

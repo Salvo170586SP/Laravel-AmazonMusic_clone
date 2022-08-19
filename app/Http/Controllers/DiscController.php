@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Disc;
+
 use Illuminate\Http\Request;
 
 class DiscController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
-        $discs = config('discs');
+        $discs = Disc::all();
 
         return view('discs.index', compact('discs'));
     }
 
-    public function show($id){
+    public function show($id)
+    {
 
-        $discs = config('discs');
-
-        $disc = $discs[$id];
-
+        $disc = Disc::findOrFail($id);
 
         return view('discs.show', compact('disc'));
     }

@@ -1,6 +1,6 @@
 <header>
     <figure>
-        <img src="{{asset('images/logo.png')}}" alt="logo">
+        <img class="img-fluid" src="{{asset('images/logo.png')}}" alt="logo">
     </figure>
     <nav>
         <ul>

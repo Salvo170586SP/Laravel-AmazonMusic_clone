@@ -4,7 +4,7 @@ return [
         [
             'title' => 'New Jersey',
             'author' => 'Bon Jovi',
-            'year' => 1988,
+            'year' => '1988',
             'poster' => 'https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg',
             'genre' => 'Rock',
             'description' => 'I "Bon Jovi" sono un gruppo statunitense che suona glam metal e hard rock, formatosi nel 1983 nella città del New Jersey di Sayreville. Attualmente la band è formata dalla voce Jon Bon Jovi, il tastierista David Bryan e il batterista Tico Torres. La formazione originaria comprendeva anche il bassista Alec J.'

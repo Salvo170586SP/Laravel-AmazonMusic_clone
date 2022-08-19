@@ -13,7 +13,7 @@
         </div>
     </section>
 
-    <section id="offer" class="my-3">
+    <section id="offer" class="py-3">
         <div class="container">
             <div class="row">
                 <div class="col col-md-6 d-flex justify-content-center align-items-center py-3">
