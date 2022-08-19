@@ -15,7 +15,7 @@
                         <div class="card bg-dark text-center p-2" style="width: 60rem">
                             <a href="{{ route('discs.show', $disc->id) }}">
                                 <figure>
-                                    <img height="200" src="{{ $disc->poster }}" alt="spaghetto quadrato">
+                                    <img height="200" class="poster-img" src="{{ $disc->poster }}" alt="{{ $disc->title }}">
                                 </figure>
                             </a>
                             <h4>{{ $disc->title }}</h4>

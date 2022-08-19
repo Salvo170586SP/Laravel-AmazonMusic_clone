@@ -10902,7 +10902,7 @@ header nav ul li a:hover, header nav ul li a:active {
   color: white;
 }
 
-figure img {
+figure .poster-img {
   border-radius: 50%;
 }
 
