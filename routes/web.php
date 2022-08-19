@@ -21,7 +21,4 @@ Route::get('/', function () {
 })->name('home');
 
 //dischi
-Route::get('/discs', 'DiscController@index')->name('discs.index');
-
-//disco
-Route::get('/discs/{id}', 'DiscController@show')->name('discs.show');
+Route::resource('discs', 'DiscController');
