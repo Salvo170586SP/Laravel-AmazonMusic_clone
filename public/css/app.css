@@ -9325,13 +9325,13 @@ header nav ul {
 header nav ul li {
   font-weight: bold;
 }
-header nav ul li a {
+header nav ul li .btn {
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.5s;
 }
-header nav ul li a:hover, header nav ul li a:active {
+header nav ul li .btn:hover, header nav ul li .btn:active {
   background-color: blue;
   color: white;
 }
