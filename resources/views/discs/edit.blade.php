@@ -14,7 +14,7 @@
             </div>
 
             {{-- alert errors --}}
-         {{--    <div class="col">
+            <div class="col">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -24,7 +24,7 @@
                         </ul>
                     </div>
                 @endif
-            </div> --}}
+            </div>
 
             <div class="col-12">
 

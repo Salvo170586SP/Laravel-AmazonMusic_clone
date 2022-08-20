@@ -91,6 +91,14 @@ class DiscController extends Controller
      */
     public function update(Request $request, Disc $disc)
     {
+        $request->validate([
+            'title' => 'required|string|min:2',
+            'author' => 'required|string|min:2',
+            'year' => 'required|string',
+            'poster' => 'nullable',
+            'description' => 'nullable|string|min:10',
+        ]);
+
         $data = $request->all();
 
         /* $disc->fill($data);
@@ -107,8 +115,12 @@ class DiscController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Disc $disc)
     {
-        //
+
+        $disc->delete();
+
+
+        return redirect()->route('discs.index');
     }
 }
