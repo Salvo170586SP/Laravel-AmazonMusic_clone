@@ -16,7 +16,7 @@
                       <div class="col-md-8">
                         <div class="card-body p-0 px-3">
                             <div class="d-flex justify-content-end align-items-center mt-3 ">
-                                <a href="{{ route('discs.edit', $disc->id) }}" class="btn btn-primary me-3"><i class="fa-solid fa-file-pen"></i></a>
+                                <a href="{{ route('discs.edit', $disc->id) }}" class="btn btn-primary mx-2"><i class="fa-solid fa-file-pen"></i></a>
                                 <form action="{{ route('discs.destroy', $disc->id) }}" method="POST">
                                   @method('DELETE')
                                   @csrf
